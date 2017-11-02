@@ -1,0 +1,212 @@
+
+body {
+    background:url(../img/six.jpg) no-repeat; 
+}
+
+.form{background: rgba(255,255,255,0.2);width:319px;margin:100px auto;}  
+#login_form{display: block;}   
+.fa{display: inline-block;top: 27px;left: 6px;position: relative;color: #ccc;}  
+ input[type="text"],input[type="password"]{padding-left:26px;}  
+.checkbox{padding-left:21px;}  
+.responsive{
+	padding:0 6px;
+	float:left;
+	width:15%;
+}
+div.img{
+	border:1px solid #ccc;
+}
+div.img:hover{
+	border:1px solid #777;
+}
+div.img img{
+width: 100%
+}
+div.desc{
+padding: 15px;
+text-align: center;
+}
+*{
+	box-sizing: border-box;
+}
+.close{
+	position:absolute;
+	top:15px;
+	right:35px;
+	color: white;
+	font-size:100px;
+    font-weight: solid;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus{
+	color:#bbb;
+	cursor:pointer;
+}
+#myImg{
+	border-radius: 5px;
+	cursor:pointer;
+	transition: 1s;
+}
+#myImg:hover{opacity: 0.7;}
+.model{
+	display: none;
+	position:fixed;
+	z-index: 1;
+	padding-top:100px;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	background-color:rgb(0,0,0);
+	 background-color: rgba(0,0,0,0.9); 
+}
+.model-content{
+	margin:auto;
+	display: block;
+	width:80%;
+	max-width: 700px;
+}
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+.model-content,#caption{
+animation-name: zoom;
+animation-duration: 0.6s;
+}
+@keyframes zoom{
+	from{transform: scale(0.1)}
+	to{transform: scale(1)}
+}
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+#div1{
+	width:100px;
+	height:100px;
+    background:#FF0000;
+	position:relative;
+	animation:myfirst 4s linear infinite alternate;
+}
+#div2{
+	width: 300px;
+	height: 300px;
+	border:2px solid #D0D0D0;
+}
+#div3{
+	width:100px;
+	height:100px;
+	border:2px solid;
+	resize:both;
+	overflow: auto;
+
+}
+.newspaper{
+	column-count: 3;
+}
+@keyframes myfirst
+{
+	0%  {background: #FF0000;left: 0px;top: 0px;}
+	25%  {background: yellow;left:200px;top: 0px; }
+    50%  {background: blue;left:200px;top: 200px;}
+    75%  {background: #D0D0D0;left:0px;top: 200px;}
+    100%  {background: #FF0000;left: 0px;top: 0px;}
+}
+.button1 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #00BFFF;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button1 span:after {
+  content: '»';
+  position: relative;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+.button1:hover span {
+  padding-right: 15px;
+}
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+ul.pagination{
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+ul.pagination li {display: inline;}
+ul.pagination li a {
+	color:black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color .3s;
+	border: 1px solid #D0D0D0;
+	font-size: 18px;
+}
+ul.pagination li a.active{
+	background-color: #eee;
+	color: black;
+	border:1px solid #ddd;
+}
+ul.pagination li a:hover:not(.active) {background-color: #ddd;
+}
+ul.mailto {
+    list-style-type: none;
+}
+
+ul.mailto li a {
+    color: green;
+    text-decoration: none;
+    padding: 3px; 
+    display: block;
+}
+@media screen and (max-width: 1000px) and (min-width: 200px){
+	ul.mailto li a {
+		padding-left: 30px;
+		background: url(email-icon.png) left center no-repeat;
+	}
+}
+@media screen and (max-width: 1000px) and (min-width: 200px){
+	ul.mailto li a:before{
+		content:'Email:';
+		font-style: italic;
+		color: #666666;
+	}
+}
+@media screen and (min-width:1px){
+	ul.mailto li a:after{
+		content: " (" attr(data-email) ")";
+        font-size: 12px;
+        font-style: italic;
+        color: #666666;
+	}
+}
